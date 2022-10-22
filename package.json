@@ -3,6 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -13,15 +14,18 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
-    "@nuxtjs/color-mode": "^3.1.6",
-    "@nuxtjs/supabase": "^0.1.28",
+    "@iconify/json": "^2.1.124",
+    "@nuxtjs/color-mode": "^3.1.8",
+    "@nuxtjs/supabase": "^0.2.0",
     "@nuxtjs/tailwindcss": "^5.3.5",
-    "@pinia/nuxt": "^0.4.2",
-    "@vueuse/nuxt": "^9.3.0",
+    "@pinia/nuxt": "^0.4.3",
+    "@unocss/nuxt": "^0.45.30",
+    "@unocss/preset-icons": "^0.45.30",
+    "@vueuse/nuxt": "^9.3.1",
     "daisyui": "^2.31.0",
-    "eslint": "^8.24.0",
+    "eslint": "^8.25.0",
     "nuxt": "3.0.0-rc.11",
-    "pinia": "^2.0.22",
-    "typescript": "^4.8.3"
+    "pinia": "^2.0.23",
+    "typescript": "^4.8.4"
   }
 }
