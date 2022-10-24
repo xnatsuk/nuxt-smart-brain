@@ -1,14 +1,12 @@
 import type { UserInput, UserProfile } from '~~/utils/types/user'
 
 export const useUserStore = defineStore('user', {
-  state: () => {
-    return {
-      name: undefined,
-      score: 0,
-      avatar: undefined,
-      loggedIn: false,
-    } as UserProfile
-  },
+  state: () => <UserProfile>({
+    name: undefined,
+    score: 0,
+    avatar: undefined,
+    loggedIn: false,
+  }),
 
   getters: {
     getName: state => state.name,
@@ -72,13 +70,6 @@ export const useUserStore = defineStore('user', {
         this.loggedIn = false
       }
     },
-
-    // clearProfile() {
-    //   this.name = undefined
-    //   this.score = 0
-    //   this.avatar = undefined
-    //   this.loggedIn = false
-    // },
 
     async fetchProfile() {
       try {
