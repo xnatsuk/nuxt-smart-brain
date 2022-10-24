@@ -35,9 +35,9 @@ watch(imageUrl, () => {
 
 <template>
   <div class="flex justify-center">
-    <img v-if="!imageUrl" class="max-w-xl" src="https://weandai.org/wp-content/uploads/2020/12/148-1-870x570.png">
-    <div v-show="imageUrl" style="position: relative">
-      <img ref="imageRef" class="max-w-xl" :src="imageUrl">
+    <img v-if="!imageUrl" src="https://weandai.org/wp-content/uploads/2020/12/148-1-870x570.png">
+    <div v-show="imageUrl" class="relative">
+      <img ref="imageRef" :src="imageUrl">
       <div v-for="(face, i) in listFace" :key="i">
         <div class="bounding-box" :style="face.style" />
       </div>

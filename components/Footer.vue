@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer items-center p-4 bg-neutral text-neutral-content">
-    <div class="items-center grid-flow-col">
+  <footer class="footer place-items-center p-4 bg-neutral text-neutral-content">
+    <div class="items-center grid-flow-col md:justify-self-start">
       Made with
       <a
         class="i-simple-icons:nuxtdotjs"
@@ -16,7 +16,7 @@
         aria-label="go to github profile"
       >@xnatsuk</a>
     </div>
-    <div class="items-center grid-flow-col gap-2 md:place-self-center md:justify-self-end">
+    <div class="items-center grid-flow-col md:justify-self-end">
       <p> This project uses the Clarifai API.</p>
       <a
         class="i-carbon:logo-github"
