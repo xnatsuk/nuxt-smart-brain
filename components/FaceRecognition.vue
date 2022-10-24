@@ -14,16 +14,16 @@ const onClick = async () => {
     loading.value = true
     const response = await fetchImageData(imageUrl.value)
 
-    return displayFaceBox(calculateFaceLocation(response.data, imageRef.value), listFace)
+    displayFaceBox(calculateFaceLocation(response.data, imageRef.value), listFace)
+
+    if (store.loggedIn)
+      return await store.updateScore()
   }
   catch (error) {
     throw new Error(error)
   }
   finally {
     loading.value = false
-
-    if (store.loggedIn)
-      await store.updateScore()
   }
 }
 
@@ -61,9 +61,9 @@ watch(imageUrl, () => {
           placeholder="Image Url"
           @keyup.enter="onClick"
         >
-        <button class="btn btn-primary shadow-lg my-6 px-8" @click="onClick">
+        <ButtonLoader :loading="loading" class="my-6 px-8" @click="onClick">
           Detect
-        </button>
+        </ButtonLoader>
       </div>
     </div>
   </div>
