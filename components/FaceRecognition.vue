@@ -14,16 +14,16 @@ const onClick = async () => {
     loading.value = true
     const response = await fetchImageData(imageUrl.value)
 
-    return displayFaceBox(calculateFaceLocation(response.data, imageRef.value), listFace)
+    displayFaceBox(calculateFaceLocation(response.data, imageRef.value), listFace)
+
+    if (store.loggedIn)
+      return await store.updateScore()
   }
   catch (error) {
     throw new Error(error)
   }
   finally {
     loading.value = false
-
-    if (store.loggedIn)
-      await store.updateScore()
   }
 }
 
@@ -35,9 +35,9 @@ watch(imageUrl, () => {
 
 <template>
   <div class="flex justify-center">
-    <img v-if="!imageUrl" class="max-w-xl" src="https://weandai.org/wp-content/uploads/2020/12/148-1-870x570.png">
-    <div v-show="imageUrl" style="position: relative">
-      <img ref="imageRef" class="max-w-xl" :src="imageUrl">
+    <img v-if="!imageUrl" src="https://weandai.org/wp-content/uploads/2020/12/148-1-870x570.png">
+    <div v-show="imageUrl" class="relative">
+      <img ref="imageRef" :src="imageUrl">
       <div v-for="(face, i) in listFace" :key="i">
         <div class="bounding-box" :style="face.style" />
       </div>
@@ -61,9 +61,9 @@ watch(imageUrl, () => {
           placeholder="Image Url"
           @keyup.enter="onClick"
         >
-        <button class="btn btn-primary shadow-lg my-6 px-8" @click="onClick">
+        <ButtonLoader :loading="loading" class="my-6 px-8" @click="onClick">
           Detect
-        </button>
+        </ButtonLoader>
       </div>
     </div>
   </div>

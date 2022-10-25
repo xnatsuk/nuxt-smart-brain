@@ -1,16 +1,17 @@
 <script setup>
+import { storeToRefs } from 'pinia'
 import { useUserStore } from '@/store/user.store'
 
-const store = useUserStore()
+const { getAvatar, getName, getScore } = storeToRefs(useUserStore())
 </script>
 
 <template>
   <div class="stats shadow-lg flex flex-col sm:flex-row">
     <div class="stat place-items-center sm:justify-items-center">
-      <div v-show="store.avatar" class="stat-figure">
+      <div v-show="getAvatar" class="stat-figure">
         <div class="avatar">
           <div class="w-16 rounded-full">
-            <img :src="store.avatar">
+            <img :src="getAvatar">
           </div>
         </div>
       </div>
@@ -18,7 +19,7 @@ const store = useUserStore()
         Name
       </div>
       <div class="stat-value text-accent">
-        {{ store.name }}
+        {{ getName }}
       </div>
     </div>
 
@@ -37,7 +38,7 @@ const store = useUserStore()
         Score
       </div>
       <div class="stat-value text-secondary">
-        {{ store.score }} Points
+        {{ getScore }} Points
       </div>
     </div>
   </div>

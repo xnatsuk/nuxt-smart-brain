@@ -2,7 +2,6 @@
 import { useUserStore } from '~~/store/user.store'
 
 const store = useUserStore()
-const user = useSupabaseUser()
 
 const onLogout = async () => {
   try {
@@ -28,7 +27,7 @@ const onLogout = async () => {
       </label>
     </div>
 
-    <div class="navbar-center">
+    <div class="navbar-center hidden sm:flex">
       <h1 class="text-2xl text-accent">
         Smart Brain
       </h1>
@@ -55,9 +54,11 @@ const onLogout = async () => {
         </div>
       </label>
 
-      <div class="ml-4">
-        <Theme />
-      </div>
+      <label>
+        <div class="ml-4">
+          <Theme />
+        </div>
+      </label>
     </div>
   </div>
 </template>
