@@ -33,7 +33,7 @@ devDependencies:
     version: 0.4.3(typescript@4.8.4)(vue@3.3.4)
   '@unocss/nuxt':
     specifier: ^0.45.30
-    version: 0.45.30(vite@3.2.7)(webpack@5.88.0)
+    version: 0.45.30(vite@3.2.8)(webpack@5.88.0)
   '@unocss/preset-icons':
     specifier: ^0.45.30
     version: 0.45.30
@@ -1851,12 +1851,12 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@unocss/astro@0.45.30(vite@3.2.7):
+  /@unocss/astro@0.45.30(vite@3.2.8):
     resolution: {integrity: sha512-eF5FxSasaKveOAIFVJlHD0dlvKDmL7oBCFQihr6XR8RhbkkMI8mO0lJB0i6QK3PtJY7F6ceCSMe+bAht6Q067w==}
     dependencies:
       '@unocss/core': 0.45.30
       '@unocss/reset': 0.45.30
-      '@unocss/vite': 0.45.30(vite@3.2.7)
+      '@unocss/vite': 0.45.30(vite@3.2.8)
     transitivePeerDependencies:
       - rollup
       - vite
@@ -1903,7 +1903,7 @@ packages:
       sirv: 2.0.2
     dev: true
 
-  /@unocss/nuxt@0.45.30(vite@3.2.7)(webpack@5.88.0):
+  /@unocss/nuxt@0.45.30(vite@3.2.8)(webpack@5.88.0):
     resolution: {integrity: sha512-m2CEbLLoqE/WacdEGEDXR9R3FbTbSTPV5gPL0Myv0jrHRSRt1MkULZ/IfPgA/A/QiOzcSIUTVXW1dSlOFh5ngQ==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
@@ -1916,9 +1916,9 @@ packages:
       '@unocss/preset-web-fonts': 0.45.30
       '@unocss/preset-wind': 0.45.30
       '@unocss/reset': 0.45.30
-      '@unocss/vite': 0.45.30(vite@3.2.7)
+      '@unocss/vite': 0.45.30(vite@3.2.8)
       '@unocss/webpack': 0.45.30(webpack@5.88.0)
-      unocss: 0.45.30(@unocss/webpack@0.45.30)(vite@3.2.7)
+      unocss: 0.45.30(@unocss/webpack@0.45.30)(vite@3.2.8)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2015,7 +2015,7 @@ packages:
       '@unocss/core': 0.45.30
     dev: true
 
-  /@unocss/vite@0.45.30(vite@3.2.7):
+  /@unocss/vite@0.45.30(vite@3.2.8):
     resolution: {integrity: sha512-4yx3W/SicS1ovpYdwbRQEGSdLZKxM76T5R0bGR9VRp6WcMoExY3Ph50LRCq1PIHT2L/GARSpJ/gGOW4hJ9lMYg==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0
@@ -2028,7 +2028,7 @@ packages:
       '@unocss/scope': 0.45.30
       '@unocss/transformer-directives': 0.45.30
       magic-string: 0.26.7
-      vite: 3.2.7(@types/node@18.11.0)
+      vite: 3.2.8(@types/node@18.11.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -8131,7 +8131,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.45.30(@unocss/webpack@0.45.30)(vite@3.2.7):
+  /unocss@0.45.30(@unocss/webpack@0.45.30)(vite@3.2.8):
     resolution: {integrity: sha512-6ODOL358gIS7IYdGmVc+DfsW881VZQPXACz5WySdSYcVgQnJvuvEVmvuXn670zN2K8TIEIP/22julybHtwDZ4Q==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -8140,7 +8140,7 @@ packages:
       '@unocss/webpack':
         optional: true
     dependencies:
-      '@unocss/astro': 0.45.30(vite@3.2.7)
+      '@unocss/astro': 0.45.30(vite@3.2.8)
       '@unocss/cli': 0.45.30
       '@unocss/core': 0.45.30
       '@unocss/preset-attributify': 0.45.30
@@ -8156,7 +8156,7 @@ packages:
       '@unocss/transformer-compile-class': 0.45.30
       '@unocss/transformer-directives': 0.45.30
       '@unocss/transformer-variant-group': 0.45.30
-      '@unocss/vite': 0.45.30(vite@3.2.7)
+      '@unocss/vite': 0.45.30(vite@3.2.8)
       '@unocss/webpack': 0.45.30(webpack@5.88.0)
     transitivePeerDependencies:
       - rollup
@@ -8335,7 +8335,7 @@ packages:
       mlly: 1.4.0
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 3.2.7(@types/node@18.11.0)
+      vite: 3.2.8(@types/node@18.11.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8398,8 +8398,8 @@ packages:
       vscode-uri: 3.0.6
     dev: true
 
-  /vite@3.2.7(@types/node@18.11.0):
-    resolution: {integrity: sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==}
+  /vite@3.2.8(@types/node@18.11.0):
+    resolution: {integrity: sha512-EtQU16PLIJpAZol2cTLttNP1mX6L0SyI0pgQB1VOoWeQnMSvtiwovV3D6NcjN8CZQWWyESD2v5NGnpz5RvgOZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
